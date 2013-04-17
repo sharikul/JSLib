@@ -1,13 +1,23 @@
 <h1>JSLib documentation is currently undergoing construction.</h1>
-<p>In the meantime, here's a little sneakpeek of JSLib code.</p>
-<pre style='color:#000000;background:#ffffff;'><html><body style='color:#000000; background:#ffffff; '><pre>
-document<span style='color:#808030; '>.</span>ready<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>function</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
-  <span style='color:#800000; font-weight:bold; '>var</span> body <span style='color:#808030; '>=</span> document<span style='color:#808030; '>.</span>getTag<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>body</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
-  body<span style='color:#808030; '>.</span>addCSS<span style='color:#808030; '>(</span><span style='color:#800080; '>{</span>
-    <span style='color:#800000; '>"</span><span style='color:#0000e6; '>font-family</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>sans-serif</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
-    <span style='color:#800000; '>"</span><span style='color:#0000e6; '>font-size</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>20px</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
-    <span style='color:#800000; '>"</span><span style='color:#0000e6; '>text-align</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>center</span><span style='color:#800000; '>"</span>
-    <span style='color:#696969; '>// Yes, that's how JSLib allows you to write CSS!</span>
-  <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
-<span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<p>In the mean time, read a little about JSLib.</p>
+<p>
+	
+	<em>JSLib</em> is a real lightweight JavaScript library that wants to help you write normal JavaScript in normal JavaScript, in the sense that the code that you write, that will be powered by the JSLib Library in the background, will look a bit like normal JavaScript. JSLib doesn't make use of any symbols in its functions - just characters! Here's a demo:
+</p>
+<pre>
+	// Add the .ready event handler
+	document.ready(function() {
+	// Make event handlers look built into JavaScript
+
+	var body = document.getTag("body");
+
+	// Style the body using the .addCSS method
+
+	body.addCSS({
+	"font-family":"sans-serif",
+	"font-size":"20px"
+	});
+	});
 </pre>
+
+<p>If you've used jQuery before, which I presume you have, you'll notice that JSLib resembles it in a way. That's because it has been inspired by the jQuery Library!</p>
