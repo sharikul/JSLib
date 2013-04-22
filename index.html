@@ -222,6 +222,20 @@ The <code>getAttr</code> method really has no special algorithm behind it to mak
 <span class="p">});</span>
 </pre></div>
 </li>
+<li><p><code>search</code><br>
+The <code>search</code> method is essentially <code>document.querySelectorAll</code>, <code>document.getElementsByName</code> and <code>document.getElementsByTagName</code> working together to make it easier for you to manipulate HTML elements on the web page. As you may have noted from previous examples, just provide the name of the tag that you want to manipulate and you'll get it returned. Just like jQuery, you can supply <code>#id</code> or <code>.class</code> to target elements by their ID or class attributes.</p></li>
+</ol><p>Let's imagine that our one <code>&lt;p&gt;</code> tag has the class <code>hover</code> assigned to it, maybe because it's been clicked on. Because of that, we can reference the <code>&lt;p&gt;</code> tag via the <code>hover</code> class, like this:</p>
+
+<pre><code>```javascript
+document.ready(function() {
+var new_p_tag_not = document.search(".hover");
+});
+```
+</code></pre>
+
+<p>If there's only one instance of the <code>.hover</code> class in the DOM, like in this example, JSLib will bring the matched element out of the Array which <code>document.querySelectorAll</code> returns it in. Also note that if a search for an element returns many instances, you will have to loop through them to manipulate them. This can be done through <code>while</code> and <code>for</code> loops.</p>
+
+<ol>
 <li>
 <p><code>trim</code><br>
 The <code>trim</code> method will remove any whitespace from the start and end of the linked string. That's basically it. Here's how you may use it:</p>
