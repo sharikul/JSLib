@@ -192,7 +192,7 @@ As you may have guessed, the <code>setAttr</code> method of JSLib sets an attrib
 </pre></div>
 
 <p>Here's the syntax:
-`attribute=value|another_attribute=another_value"<br>
+<code>attribute=value|another_attribute=another_value</code><br>
 However, do make sure that there's no spacing between the pipe symbol and attributes.</p>
 </li>
 <li>
@@ -226,29 +226,24 @@ The <code>getAttr</code> method really has no special algorithm behind it to mak
 The <code>search</code> method is essentially <code>document.querySelectorAll</code>, <code>document.getElementsByName</code> and <code>document.getElementsByTagName</code> working together to make it easier for you to manipulate HTML elements on the web page. As you may have noted from previous examples, just provide the name of the tag that you want to manipulate and you'll get it returned. Just like jQuery, you can supply <code>#id</code> or <code>.class</code> to target elements by their ID or class attributes.</p></li>
 </ol><p>Let's imagine that our one <code>&lt;p&gt;</code> tag has the class <code>hover</code> assigned to it, maybe because it's been clicked on. Because of that, we can reference the <code>&lt;p&gt;</code> tag via the <code>hover</code> class, like this:</p>
 
-<pre><code>```javascript
-document.ready(function() {
-var new_p_tag_not = document.search(".hover");
+<pre><code>document.ready(function() {
+var new_p_not = document.search(".hover");
 });
-```
 </code></pre>
 
 <p>If there's only one instance of the <code>.hover</code> class in the DOM, like in this example, JSLib will bring the matched element out of the Array which <code>document.querySelectorAll</code> returns it in. Also note that if a search for an element returns many instances, you will have to loop through them to manipulate them. This can be done through <code>while</code> and <code>for</code> loops.</p>
 
 <ol>
 <li>
-<p><code>trim</code><br>
-The <code>trim</code> method will remove any whitespace from the start and end of the linked string. That's basically it. Here's how you may use it:</p>
-
-<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<code>trim</code><br>
+The <code>trim</code> method will remove any whitespace from the start and end of the linked string. That's basically it. Here's how you may use it:</li>
+</ol><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 <span class="kd">var</span> <span class="nx">lots_of_spaces</span> <span class="o">=</span> <span class="s2">"               Wow, look at the whitespace!                       "</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lots_of_spaces</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
 <span class="p">});</span>
 </pre></div>
 
 <p>Once the webpage is loaded, you'd get "Wow, look at the whitespace!" alerted without any spaces before and after (does the alert function even show whitespace?!).</p>
-</li>
-</ol>
         </section>
 
         <footer>
