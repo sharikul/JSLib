@@ -1,46 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>JSLib by sharikul</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>JSLib by sharikul</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>JSLib</h1>
-        <p>Write normal JavaScript - in normal JavaScript.</p>
+    <div id="container">
+      <div class="inner">
 
-        <p class="view"><a href="https://github.com/sharikul/JSLib">View the Project on GitHub <small>sharikul/JSLib</small></a></p>
+        <header>
+          <h1>JSLib</h1>
+          <h2>Write normal JavaScript - in normal JavaScript.</h2>
+        </header>
 
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/sharikul/JSLib/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/sharikul/JSLib/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/sharikul/JSLib" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-        <ul>
-          <li><a href="https://github.com/sharikul/JSLib/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sharikul/JSLib/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sharikul/JSLib">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>JSLib is a new JavaScript library that wants to help you write normal JavaScript in normal JavaScript, with great functions here and there. The overall aim of JSLib is to make your code look more concise and readable.</p>
+        <hr>
 
-<h2>Begin using JSLib</h2>
+        <section id="main_content">
+          <h1>What is JSLib?</h1>
 
-<p>JSLib is just another JavaScript (.js) file, so it can be imported to your web pages via the <code>script</code> tag, like so:
-<code>&lt;script src="jslib.js"&gt;&lt;/script&gt;</code></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/sharikul">sharikul</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<hr><p>JSLib is a new JavaScript that wants to help you write JavaScript in a more cleaner and quicker way. By eliminating the use of certain symbols and characters, you can make your code easy to read and understand. That's JSLib for you.</p>
+
+<h1>How to start using JSLib</h1>
+
+<hr><p>JSLib is just another JavaScript file so it can be imported to your web pages via the HTML <code>script</code> tag, like so:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jslib.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h1>Meet the functions</h1>
+
+<hr><ol>
+<li>
+<p><code>load</code><br>
+The <code>load</code> method is a wrapper for the <code>onload</code> event handler, to be used to run code whilst the current web page is being loaded to the user's web browser, i.e. images and files are being downloaded from a server somewhere.</p>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"I'm being loaded!"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>ready</code><br>
+If you're familiar with the jQuery JavaScript library, you'd know when or how to use the <code>ready</code> event handler. You would use the <code>ready</code> method in JSLib in (almost) exactly the same way. You should use this method if you're writing JavaScript code that's going to make use of HTML elements within the HTML <code>head</code> tag, like so:</p>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"I'm ready"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>press</code><br>
+The <code>press</code> method is a wrapper around JavaScript's <code>onclick</code> event handler, which is run whenever a targeted element is clicked with a mouse (or tapped on a touchscreen device). Here's how you might use this method:</p>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"body"</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">"I'm clicked!"</span><span class="p">);</span>
+<span class="c1">// You'd be better off not alerting everytime the page is clicked.</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>html</code><br>
+The <code>html</code> method will retrieve and return the <code>innerHTML</code> value of the linked element. That's pretty much it. Here's how you may go about using this method:</p>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">h1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h1</span><span class="p">.</span><span class="nx">html</span><span class="p">());</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>addCSS</code><br>
+The <code>addCSS</code> method quite literally serves to do what it's called: to add CSS, i.e. to the linked element. The method accepts one parameter which is an object. In jQuery, for example, you provide an object to the <code>css</code> method to supply multiple properties to the linked object. Here's how you may use this method at its basic form:</p>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"body"</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">addCSS</span><span class="p">({</span>
+<span class="nx">background</span><span class="o">:</span> <span class="s2">"red"</span><span class="p">,</span>
+<span class="nx">padding</span><span class="o">:</span> <span class="s2">"5px 10px"</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>When the page has been loaded, in this case, the background colour of it will be red and it will have its padding set to <code>5px</code> top and bottom, and <code>10px</code> left and right. However, this method has been built to be more functional that what it seems. </p>
+
+<h3>Meet pipe nesting</h3>
+
+<p>A great feature of many CSS preprocessors (such as Sass) is that they allow you to nest sub-properties in one block to avoid repetition, thus enforcing the rule of DRY (don't repeat yourself). Here's an example: </p>
+
+<div class="highlight"><pre><span class="nt">font</span><span class="o">:</span> <span class="p">{</span>
+  <span class="n">family</span><span class="o">:</span> <span class="k">sans-serif</span><span class="p">;</span>
+  <span class="k">size</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The generated CSS file will append <code>font</code> before each sub-property name, which is valid CSS. The  <code>addCSS</code> method also provides this cool functionality in its own way. Here's a demonstration, continuing    on from the previous example:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"body"</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">addCSS</span><span class="p">({</span>
+<span class="nx">background</span><span class="o">:</span> <span class="s2">"red"</span><span class="p">,</span>
+<span class="nx">padding</span><span class="o">:</span> <span class="s2">"5px 10px"</span><span class="p">,</span>
+<span class="s2">"font: family | size | weight"</span><span class="o">:</span><span class="s2">"sans-serif | 20px | lighter"</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Once the webpage loads, <code>font</code> will be appended to each sub-property name, in this case: <code>family</code> becomes <code>font-family</code>, <code>size</code> becomes <code>font-size</code> and <code>weight</code> becomes <code>font-weight</code>. This is the syntax:<br></p>
+
+<p><code>property: property-one | property-two | etc...</code></p>
+</li>
+<li>
+<p><code>toggle</code><br>
+This method toggles the display of the linked element. If the property is shown on the page, it'll be hidden, and vice versa. Here's how you may go about using this method.</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">toggle_button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"#toggle-button"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">elem_to_toggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"#elem-to-toggle"</span><span class="p">);</span>
+<span class="nx">toggle_button</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">elem_to_toggle</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+<span class="p">});</span> 
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>hover</code><br>
+The <code>hover</code> method replicates the <code>onmouseover</code> event handler, which lets you perform certain tasks when the mouse is over the targeted element. Here's how you may use this method:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"body"</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">hover</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"The user has moved their mouse over the page."</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>leave</code><br>
+The <code>leave</code> method replicates the <code>onmouseleave</code> event handler of JavaScript, which lets you perform certain tasks when the mouse is moved away from the targeted element. Here's how you may use this method:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"body"</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">leave</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"The user has moved their mouse away from the page."</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>setAttr</code><br>
+As you may have guessed, the <code>setAttr</code> method of JSLib sets an attribute to the linked element. In its basic form, it replicates the JavaScript <code>setAttribute</code> method. However, the <code>setAttr</code> method is actually more powerful than that. It lets you provide any number of attributes and write it in the way you'd write it in HTML, through the use of the <code>=</code> symbol, like this:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">paragraph</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"p"</span><span class="p">);</span> <span class="c1">// Let's imagine there's only one &lt;p&gt; tag on the page</span>
+<span class="nx">paragraph</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">setAttr</span><span class="p">(</span><span class="s2">"title=You've hovered over me!|class=hover|disabled=false"</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Once the mouse clicks on the paragraph element, the function will assign the three attributes to it, resulting in:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">title=</span><span class="s">"You've hovered over me!"</span> <span class="na">class=</span><span class="s">"hover"</span> <span class="na">disabled=</span><span class="s">"false"</span><span class="nt">&gt;</span>Paragraph tag here!<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+
+<p>Here's the syntax:
+`attribute=value|another_attribute=another_value"<br>
+However, do make sure that there's no spacing between the pipe symbol and attributes.</p>
+</li>
+<li>
+<p><code>removeAttr</code><br>
+The <code>removeAttr</code> method removes attributes from the targeted element. Similarly to <code>setAttr</code>, it's able to work differently than what might be expected. Following on from the previous example for <code>setAttr</code>, where three attributes (<code>title</code>, <code>class</code>, <code>disabled</code>) had been set to a <code>&lt;p&gt;</code> tag, here's how the <code>removeAttr</code> method would be used to remove those attributes from the <code>&lt;p&gt;</code> tag:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">paragraph</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"p"</span><span class="p">);</span> <span class="c1">// Let's imagine there's only one &lt;p&gt; tag on the page</span>
+<span class="nx">paragraph</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s2">"title|class|disabled"</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Quite simply, you'd provide the name of attributes you want to remove with the use of the pipe symbol. If it's the matter of removing one attribute, don't provide any! :)</p>
+</li>
+<li>
+<p><code>getAttr</code><br>
+The <code>getAttr</code> method really has no special algorithm behind it to make it any special, so what it does, frankly, is return the value of the attribute that you selected from the targeted element. Following on from the previous examples, here's how you may use this method:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">paragraph</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"p"</span><span class="p">);</span> <span class="c1">// Let's imagine there's only one &lt;p&gt; tag on the page</span>
+<span class="nx">paragraph</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttr</span><span class="p">(</span><span class="s2">"title"</span><span class="p">));</span>
+<span class="c1">// Of course, attempt to get the attribute of an element once you've actually set it!</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+<li>
+<p><code>trim</code><br>
+The <code>trim</code> method will remove any whitespace from the start and end of the linked string. That's basically it. Here's how you may use it:</p>
+
+<div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">lots_of_spaces</span> <span class="o">=</span> <span class="s2">"               Wow, look at the whitespace!                       "</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lots_of_spaces</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Once the webpage is loaded, you'd get "Wow, look at the whitespace!" alerted without any spaces before and after (does the alert function even show whitespace?!).</p>
+</li>
+</ol>
+        </section>
+
+        <footer>
+          JSLib is maintained by <a href="https://github.com/sharikul">sharikul</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-40347397-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
