@@ -1,37 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <title>JSLib by sharikul</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>JSLib</h1>
-          <h2>Write normal JavaScript - in normal JavaScript.</h2>
-        </header>
+      <header>
+        <h1>JSLib</h1>
+        <p>Write normal JavaScript - in normal JavaScript.</p>
+      </header>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/sharikul/JSLib/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/sharikul/JSLib/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/sharikul/JSLib" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+      <div id="banner">
+        <span id="logo"></span>
 
-        <hr>
+        <a href="https://github.com/sharikul/JSLib" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/sharikul/JSLib/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/sharikul/JSLib/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-        <section id="main_content">
-          <h1>What is JSLib?</h1>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>What is JSLib?</h1>
 
 <hr><p>JSLib is a new library of methods which aim to help you write beautiful and more functional code. </p>
 
@@ -113,7 +121,7 @@ The <code>addCSS</code> method quite literally serves to do what it's called: to
 
 <h3>Meet pipe nesting</h3>
 
-<p>A great feature of many CSS preprocessors (such as Sass) is that they allow you to nest sub-properties in one block to avoid repetition, thus enforcing the rule of DRY (don't repeat yourself). Here's an example: </p>
+<p>A great feature of many CSS preprocessors (such as Sass) is nesting sub-properties in one block to avoid repetition, thus enforcing the rule of DRY (don't repeat yourself). Here's an example: </p>
 
 <div class="highlight"><pre><span class="nt">font</span><span class="o">:</span> <span class="p">{</span>
   <span class="n">family</span><span class="o">:</span> <span class="k">sans-serif</span><span class="p">;</span>
@@ -135,7 +143,7 @@ The <code>addCSS</code> method quite literally serves to do what it's called: to
 
 <p>Once the webpage loads, <code>font</code> will be appended to each sub-property name, in this case: <code>family</code> becomes <code>font-family</code>, <code>size</code> becomes <code>font-size</code> and <code>weight</code> becomes <code>font-weight</code>. This is the syntax:<br></p>
 
-<p><code>property: property-one | property-two | etc...</code></p>
+<p><code>property: sub-property-one | sub-property-two | etc...</code></p>
 </li>
 <li>
 <p><code>toggle</code><br>
@@ -239,19 +247,19 @@ var new_p_not = document.search(".hover");
 The <code>trim</code> method will remove any whitespace from the start and end of the linked string. That's basically it. Here's how you may use it:</li>
 </ol><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 <span class="kd">var</span> <span class="nx">lots_of_spaces</span> <span class="o">=</span> <span class="s2">"               Wow, look at the whitespace!                       "</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lots_of_spaces</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">lots_of_spaces</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
 <span class="p">});</span>
 </pre></div>
 
 <p>Once the webpage is loaded, you'd get "Wow, look at the whitespace!" alerted without any spaces before and after (does the alert function even show whitespace?!).</p>
-        </section>
-
-        <footer>
-          JSLib is maintained by <a href="https://github.com/sharikul">sharikul</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/sharikul">sharikul</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -262,7 +270,5 @@ The <code>trim</code> method will remove any whitespace from the start and end o
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
   </body>
 </html>
